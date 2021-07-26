@@ -1,0 +1,34 @@
+.vote {
+  background-image: url('../images/bg-desktop-2700.png');
+  
+  @include responsive(mobile) {
+    background-image: url('../images/bg-mob-600.png');
+  }
+
+  .header {
+    @include responsive(mobile) {
+      background: #FFFFFF;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .footer {
+    margin-top: 178px;
+
+    @include responsive(mobile) {
+      margin-top: 122px;
+    }
+  }
+
+  .container {
+    @include responsive(mobile) {
+      width: 95%;
+    }
+  }
+}
+
+@import "vote-info";
+@import "vote-filter";
+@import "type";
+@import "pagination";
+@import "popup";

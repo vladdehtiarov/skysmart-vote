@@ -1,0 +1,385 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.52);
+}
+
+.popup__content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popup-form {
+  .popup__content {
+    width: 536px;
+    height: 556px;
+    background-image: url('../images/modal-form_f.png');
+    border-radius: 16px;
+    z-index: 1000;
+
+    @include responsive(mobile) {
+      width: 300px;
+      height: 484px;
+      background-image: url('../images/modal-form_m.png');
+      border-right: 6px;
+    }
+  }
+
+  .popup__inner {
+    width: 403px;
+    padding-top: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @include responsive(mobile) {
+      width: 268px;
+      padding-top: 32px;
+    }
+  }
+}
+
+.popup-send {
+  .popup__content {
+    width: 536px;
+    height: 292px;
+    background-image: url('../images/moadal-info_d.png');
+    border-radius: 16px;
+    z-index: 1000;
+
+    @include responsive(mobile) {
+      width: 300px;
+      height: 230px;
+      background-image: url('../images/modal-info_m.png');
+      border-radius: 6px;
+    }
+  }
+
+  .popup__inner {
+    width: 403px;
+    padding-top: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @include responsive(mobile) {
+      width: 268px;
+      padding-top: 32px;
+    }
+  }
+}
+
+.popup-picture {
+  .popup__content {
+    width: 560px;
+    height: 758px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @include responsive(mobile) {
+      width: 300px;
+      height: 450px;
+    }
+  }
+
+  .popup__inner {
+    width: 560px;
+    height: 698px;
+    background: #FFF8C8;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+
+    @include responsive(mobile) {
+      width: 300px;
+      height: 374px;
+      border-right: 10px;
+    }
+
+    .contant-img {
+      width: 500px;
+      height: 600px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+
+    .close-popup {
+      top: 16px;
+      right: 16px;
+    }
+
+  }
+
+
+}
+
+.popup-story{
+  .popup__content {
+    width: 760px;
+    height: 726px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @include responsive(mobile) {
+      width: 300px;
+      height: 650px;
+    }
+  }
+
+  .popup__inner {
+    width: 760px;
+    height: 666px;
+    background: #FFFFFF;
+    border-radius: 8px;
+
+    @include responsive(mobile) {
+      width: 300px;
+      height: 575px;
+    }
+
+    .close-popup {
+      top: 24px;
+      right: 24px;
+    }
+  }
+
+  &__story-wrapper {
+    width: 634px;
+    height: 546px;
+    margin-top: 64px;
+    margin-left: 96px;
+    overflow-y: scroll;
+
+    @include responsive(mobile) {
+      width: 252px;
+      height: 525px;
+      margin-top: 32px;
+      margin-left: 24px;
+    }
+  }
+
+  &__story {
+    width: 560px;
+    font-size: 16px;
+    line-height: 160%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #000000;
+
+    @include responsive(mobile) {
+      width: 248px;
+      line-height: 130%;
+    }
+  }
+}
+
+.popup-btn {
+  @include responsive(mobile) {
+    width: 300px;
+    height: 60px;
+    margin: 0 auto;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: -0.05px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    border-right: 10px;
+  }
+}
+
+.popup-title {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 110%;
+  text-align: center;
+  letter-spacing: -1px;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #FFFFFF;
+
+  @include responsive(mobile) {
+    font-size: 26px;
+    letter-spacing: -0.5px;
+  }
+}
+
+.popup-subtitle {
+  width: 403px;
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 110%;
+  text-align: center;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+
+  @include responsive(mobile) {
+    width: 228px;
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.5px;
+  }
+}
+
+.form {
+  width: 340px;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+
+  @include responsive(mobile) {
+    width: 268px;
+    margin-top: 24px;
+  }
+}
+
+.input {
+  width: 340px;
+  height: 48px;
+  margin-top: 8px;
+  padding: 12px 16px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: -0.05px;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: rgba(0, 0, 0, 0.5);
+
+  @include responsive(mobile) {
+    width: 268px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &::placeholder {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.05px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: rgba(0, 0, 0, 0.24);
+
+    @include responsive(mobile) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+
+.form-button {
+  width: 340px;
+  height: 48px;
+  margin-top: 8px;
+  background: #FB8023;
+  border-radius: 8px;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: -0.05px;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #FFFFFF;
+  border: none;
+  outline: none;
+
+  @include responsive(mobile) {
+    width: 268px;
+  }
+}
+
+.close-popup {
+  position: absolute;
+  top: 24px;
+  right: -34px;
+  cursor: pointer;
+
+  @include responsive(mobile) {
+    top: 16px;
+    right: 0;
+  }
+}
+
+.form-info {
+  margin-top: 24px;
+
+  a {
+    text-decoration-line: underline;
+  }
+
+  @include responsive(mobile) {
+    font-size: 12px;
+    margin-top: 16px;
+  }
+
+}
+
+
+
+.form-info, a {
+  font-size: 12px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: -0.05px;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: rgba(0, 0, 0, 0.24)
+}
+
+.popup-btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+//custom csrollbar
+.custom-scrollbar::-webkit-scrollbar-track
+{
+  border-radius: 8px;
+  background-color: #FFF2E0;
+
+  @include responsive(mobile) {
+    background-color: transparent;
+    border-right: 0;
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar
+{
+  width: 4px;
+  background-color: #FFF2E0;
+
+  @include responsive(mobile) {
+    background-color: transparent;
+    width: 0;
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb
+{
+  border-radius: 8px;
+  background-color: #FF9E00;
+
+  @include responsive(mobile) {
+    border-right: 0;
+    background-color: transparent;
+  }
+}

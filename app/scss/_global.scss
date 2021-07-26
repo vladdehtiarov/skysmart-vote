@@ -1,0 +1,113 @@
+*, html, body {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Stratos LC Web', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: $font-clor;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.main {
+    width: 100%;
+}
+
+body {
+    background-image: url('../images/bg_form.png');
+    
+    @include responsive(mobile) {
+        background-image: url('../images/bg_form_mob.png');
+    }
+}
+
+#next-step {
+    background-image: url('../images/bg_next-step.png');
+    
+    @include responsive(mobile) {
+        background-image: url('../images/bg_next-step_mob.png');
+    }
+}
+
+h1.title {
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 95%;
+    letter-spacing: -1.90204px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+
+    @include responsive(mobile) {
+        font-size: 40px;
+        line-height: 100%;
+    }
+}
+
+p.subtitle {
+    font-size: 24px;
+    line-height: 140%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+
+    @include  responsive(mobile) {
+        font-size: 16px;
+        line-height: 130%;
+    }
+
+    a {
+        font-size: 24px;
+        line-height: 140%;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #fff;
+        text-decoration-line: underline;
+
+        @include responsive(mobile) {
+            font-size: 16px;
+            line-height: 130%;
+        }
+    }
+}
+
+.br-m {
+    display: none;
+    @include responsive(mobile) {
+        display: block;
+    }
+}
+
+.br-d {
+    display: block;
+    @include responsive(mobile) {
+        display: none;
+    }
+}
+
+.js-validate-error-label {
+    display: none;
+}
