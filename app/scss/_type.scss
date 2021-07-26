@@ -86,6 +86,9 @@
 
     .card-comments {
       margin-top: 6px;
+      margin-left: 8px;
+      position: absolute;
+      z-index: 500;
     }
   }
 
@@ -152,7 +155,12 @@
     }
 
     .card-comments {
-      margin-top: 6px;
+      margin-top: 18px;
+
+      @include responsive(mobile) {
+        position: absolute;
+        bottom: 54px
+      }
     }
   }
 }
@@ -204,6 +212,12 @@
   margin-top: 16px;
   background: rgba(0, 0, 0, 0.16);
   border-radius: 8px;
+  overflow: hidden;
+
+  iframe {
+    width: inherit;
+    height: inherit;
+  }
 
   @include responsive(mobile) {
     height: 150px;
@@ -228,11 +242,13 @@
   position: relative;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.48);
+  cursor: pointer;
 
   .zoom-icon {
     position: absolute;
     top: 8px;
     right: 8px;
+    z-index: 500;
   }
 
   .card-picture__image {
@@ -252,6 +268,7 @@
   @include responsive(mobile) {
     height: 277px;
     padding: 24px 24px 0 24px;
+    position: relative;
   }
 }
 

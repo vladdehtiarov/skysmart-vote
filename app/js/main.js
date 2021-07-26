@@ -46,6 +46,7 @@ const send = document.querySelector('.popup-send');
 const picture = document.querySelector('.popup-picture');
 const story = document.querySelector('.popup-story');
 const allStory = document.querySelectorAll('.all-story');
+const cardPicture = document.querySelectorAll('.card-picture');
 
 //Show form popup
 openForm.forEach(i => {
@@ -63,7 +64,13 @@ openPicture.forEach(i => {
     });
 });
 
-//Show storu popup
+cardPicture.forEach(i => {
+    i.addEventListener('click', () => {
+        picture.classList.remove('hide');
+    });
+});
+
+//Show story popup
 openStory.forEach(i => {
     i.addEventListener('click', () => {
         story.classList.remove('hide');
@@ -103,3 +110,11 @@ validateForm('.form',
         name: {required: true},
         phone: {required: true}
     });
+
+// Phone mask
+
+let selector = document.querySelector('.input-phone');
+
+let im = new Inputmask("+7(999) 999-9999");
+
+im.mask(selector);

@@ -5,16 +5,18 @@
   width: 100vw;
   height: 100%;
   background: rgba(0, 0, 0, 0.52);
+  z-index: 1000;
 }
 
 .popup__content {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  position: fixed;
-  top: 50%;
+  position: absolute;
+  top: 10%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+  z-index: 1200;
 }
 
 .popup-form {
@@ -174,7 +176,7 @@
     @include responsive(mobile) {
       width: 252px;
       height: 525px;
-      margin-top: 32px;
+      margin-top: 44px;
       margin-left: 24px;
     }
   }
@@ -351,35 +353,18 @@
 }
 
 //custom csrollbar
-.custom-scrollbar::-webkit-scrollbar-track
-{
+.custom-scrollbar::-webkit-scrollbar-track {
   border-radius: 8px;
   background-color: #FFF2E0;
-
-  @include responsive(mobile) {
-    background-color: transparent;
-    border-right: 0;
-  }
 }
 
-.custom-scrollbar::-webkit-scrollbar
-{
+.custom-scrollbar::-webkit-scrollbar {
   width: 4px;
   background-color: #FFF2E0;
-
-  @include responsive(mobile) {
-    background-color: transparent;
-    width: 0;
-  }
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb
-{
+.custom-scrollbar::-webkit-scrollbar-thumb {
   border-radius: 8px;
   background-color: #FF9E00;
 
-  @include responsive(mobile) {
-    border-right: 0;
-    background-color: transparent;
-  }
 }
