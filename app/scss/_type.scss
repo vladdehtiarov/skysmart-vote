@@ -254,7 +254,7 @@
   .card-picture__image {
     width: inherit;
     height: inherit;
-    object-fit: cover;
+    object-fit: contain;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -294,6 +294,7 @@
   color: #D571FF;
   cursor: pointer;
   text-decoration-line: underline;
+  text-align: left;
 
   @include responsive(mobile) {
     margin-top: 40px;
