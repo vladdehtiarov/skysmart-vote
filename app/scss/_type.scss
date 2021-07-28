@@ -384,8 +384,50 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+  position: relative;
+
+  .viget {
+    position: absolute;
+    top: 50px;
+
+    @include responsive(mobile) {
+      display: none;
+    }
+
+    &__inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 205px;
+      height: 56px;
+      background: #2E2E2E;
+      border-radius: 8px;
+      font-size: 16px;
+      line-height: 24px;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      color: #FFFFFF;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 6px 6px 6px;
+        border-color: transparent transparent #2e2e2e transparent;
+      }
+    }
+  }
 
   img {
     margin-left: 11px;
   }
+}
+
+.img-wrapp {
+  width: 100%;
 }

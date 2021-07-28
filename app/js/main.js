@@ -118,3 +118,17 @@ let selector = document.querySelector('.input-phone');
 let im = new Inputmask("+7(999) 999-9999");
 
 im.mask(selector);
+
+
+// Viget
+const btnSend = document.querySelectorAll('.btn-send');
+
+btnSend.forEach(i => {
+    i.addEventListener('click', function(e) {
+        let v = this.children[1];
+        e.preventDefault();
+        v.classList.remove('hide');
+        setTimeout(() => v.classList.add('hide') ,1500);
+    });
+});
+
