@@ -67,6 +67,7 @@ openPicture.forEach(i => {
 cardPicture.forEach(i => {
     i.addEventListener('click', () => {
         picture.classList.remove('hide');
+        window.scrollTo( 0, 0);
     });
 });
 
