@@ -4,7 +4,7 @@
   margin-top: 56px;
   display: none;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   @include responsive(mobile) {
     max-width: 100%;
@@ -17,11 +17,23 @@
     .card {
       width: 500px;
 
+      @include responsive(desktop) {
+        &:nth-child(2n+1) {
+          margin-left: 0;
+        }
+
+        &:nth-child(4n+4) {
+          margin-left: 10px;
+        }
+      }
+
       @include responsive(mobile) {
         width: 300px;
       }
     }
   }
+
+
 
   // Picture type
   &-picture {
@@ -174,6 +186,18 @@
 //Card
 .card {
   margin-top: 80px;
+
+  @include responsive(desktop) {
+    margin-left: 10px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:nth-child(4n+4) {
+      margin-left: 0;
+    }
+  }
 
   @include responsive(mobile) {
     margin-top: 56px;

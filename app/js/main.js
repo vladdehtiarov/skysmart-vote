@@ -50,7 +50,8 @@ const cardPicture = document.querySelectorAll('.card-picture');
 
 //Show form popup
 openForm.forEach(i => {
-    i.addEventListener('click', () => {
+    i.addEventListener('click', (e) => {
+        e.preventDefault();
         picture.classList.add('hide');
         story.classList.add('hide');
         form.classList.remove('hide');
@@ -59,27 +60,31 @@ openForm.forEach(i => {
 
 //Show picture popup
 openPicture.forEach(i => {
-    i.addEventListener('click', () => {
+    i.addEventListener('click', (e) => {
+        e.preventDefault();
         picture.classList.remove('hide');
     });
 });
 
 cardPicture.forEach(i => {
-    i.addEventListener('click', () => {
+    i.addEventListener('click', (e) => {
+        e.preventDefault();
         picture.classList.remove('hide');
-        window.scrollTo( 0, 0);
+        // window.scrollTo( 0, 0);
     });
 });
 
 //Show story popup
 openStory.forEach(i => {
-    i.addEventListener('click', () => {
+    i.addEventListener('click', (e) => {
+        e.preventDefault();
         story.classList.remove('hide');
     });
 });
 
 allStory.forEach(i => {
-    i.addEventListener('click', () => {
+    i.addEventListener('click', (e) => {
+        e.preventDefault();
         story.classList.remove('hide');
     });
 });
