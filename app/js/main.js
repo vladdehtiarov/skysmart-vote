@@ -138,3 +138,19 @@ btnSend.forEach(i => {
     });
 });
 
+// Wiev cards
+
+const typePicture = document.querySelector('.type-picture');
+const typeStory = document.querySelector('.type-story');
+
+const cardsInPicture = typePicture.querySelectorAll('.card');
+const cardsInStory = typeStory.querySelectorAll('.card');
+
+
+if (cardsInPicture.length < 3) {
+    typePicture.classList.add('no-flex-card');
+}
+
+if (cardsInStory.length < 3) {
+    typeStory.classList.add('no-flex-card');
+}
