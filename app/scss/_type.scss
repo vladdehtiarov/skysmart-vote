@@ -278,7 +278,7 @@
   .card-picture__image {
     width: inherit;
     height: inherit;
-    object-fit: contain;
+    object-fit: cover;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -453,5 +453,7 @@
 }
 
 .img-wrapp {
-  width: 100%;
+  width: inherit;
+  height: inherit;
+  min-height: inherit;
 }
